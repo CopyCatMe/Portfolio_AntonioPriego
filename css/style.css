@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Smooch Sans';
+    src: url(../assets/fonts/SmoochSans-VariableFont_wght.ttf);
+}
+
+* {
+    /* font-family: 'Smooch Sans', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Smooch Sans', sans-serif;
+    background-color: #222222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    width: 30%;
+    margin: 30px auto;
+    border-radius: 50px;
+    background-color: #333;
+    transition: background-color 1s ease-out;
+    animation: changeColor 1s ease-out;
+}
+
+nav:hover {
+    background-color: #444;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #222222;
+    }
+    100% {
+        background-color: #333;
+    }
+}
