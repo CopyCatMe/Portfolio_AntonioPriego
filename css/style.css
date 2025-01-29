@@ -1,6 +1,7 @@
 @font-face {
-    font-family: 'Smooch Sans';
-    src: url(../assets/fonts/SmoochSans-VariableFont_wght.ttf);
+    font-family: 'Satoshi';
+    src: url(../assets/fonts/Satoshi-VariableItalic.ttf);
+    font-style: italic;
 }
 
 * {
@@ -11,7 +12,7 @@
 }
 
 body {
-    font-family: 'Smooch Sans', sans-serif;
+    font-family: 'Satoshi', italic;
     background-color: #222222;
     border: #6e6e6e 1px solid;
     margin: 30px;
@@ -38,7 +39,7 @@ nav:hover {
 a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 14px;
     margin: 15px;
 }
 
