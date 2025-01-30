@@ -57,7 +57,6 @@ a:hover {
 a.active {
     color: #dbdbdb;
     text-decoration: none;
-    cursor: default;
 }
 
 section {
