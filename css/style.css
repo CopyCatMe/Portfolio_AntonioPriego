@@ -119,6 +119,7 @@ section {
 .email {
     color: #dbdbdb;
     margin: 0;
+    user-select: auto;
 }
 
 .cardLine {
