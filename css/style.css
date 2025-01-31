@@ -30,7 +30,7 @@ body {
     bottom: -50%;
     width: 200%;
     height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background: transparent url('../assets/images/background.png') repeat 0 0;
     background-repeat: repeat;
     animation: bg-animation .2s infinite;
     opacity: .9;
@@ -154,7 +154,7 @@ section {
     width: 40%;
     background-color: #101010;
     box-shadow: inset 16px 14px 20px #0000008c;
-    
+
 }
 
 h3 {
@@ -162,14 +162,14 @@ h3 {
     text-align: right;
     border-bottom: #6e6e6e 2px solid;
     color: #d4d4d4;
-    
+
 }
 
 .technologies {
     margin: 15px auto;
     gap: 10px;
     width: 100%;
-    height: 150px; /* Ajustado para mejor proporción con imágenes */
+    height: 150px;
     border-radius: 10px;
     transition: transform 0.4s ease-out;
     display: flex;
@@ -205,7 +205,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #292929;
+    background-color: #3d3d3d;
 }
 
 .slider .slide img {
@@ -213,7 +213,6 @@ h3 {
     width: 100%;
     object-fit: contain;
     transition: transform 0.4s ease-out;
-
 }
 
 .slide img:hover {
@@ -226,6 +225,138 @@ h3 {
 
 #alignProject {
     text-align: left;
+}
+
+.container {
+    position: relative;
+}
+
+.container .card {
+    position: relative;
+    width: 240px;
+    height: 280px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before {
+    clip-path: circle(250px at 80% -20%);
+}
+
+.container .card:after {
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    color: rgba(255, 255, 25, 0.05)
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+    filter: opacity(0.5);
+}
+
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container .card:hover .contentBx {
+    height: 210px;
+    
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+
+.container .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    transform: translateY(100px);
+    transition: 0.5s;
+    margin-top: 0;
+}
+
+.container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(20px);
+    transition-delay: 0.15s;
+}
+
+.container .card .contentBx a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.container .card .contentBx a:hover img {
+    filter: brightness(10);
+}
+
+.container .card .contentBx p {
+    font-size: 14px;
+    color: #dbdbdb;
+    margin-top: 10px;
+    transition: 0.5s;
+    transform: translateY(100px);
+
+}
+
+.container .card:hover .contentBx p {
+    transform: translateY(10px);
+    transition-delay: 0.15s;
+    margin: 5px;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 @keyframes changeBg {
@@ -273,59 +404,28 @@ h3 {
 }
 
 @keyframes bg-animation {
-    0% {
-        transform: translate(0, 0)
-    }
-
-    10% {
-        transform: translate(-5%, -5%)
-    }
-
-    20% {
-        transform: translate(-10%, 5%)
-    }
-
-    30% {
-        transform: translate(5%, -10%)
-    }
-
-    40% {
-        transform: translate(-5%, 15%)
-    }
-
-    50% {
-        transform: translate(-10%, 5%)
-    }
-
-    60% {
-        transform: translate(15%, 0)
-    }
-
-    70% {
-        transform: translate(0, 10%)
-    }
-
-    80% {
-        transform: translate(-15%, 0)
-    }
-
-    90% {
-        transform: translate(10%, 5%)
-    }
-
-    100% {
-        transform: translate(5%, 0)
-    }
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 15%); }
+    50%, 90% { transform: translate(-10%, 5%); }
+    60% { transform: translate(15%, 0); }
+    70% { transform: translate(0, 10%); }
+    80% { transform: translate(-15%, 0); }
+    90% { transform: translate(10%, 5%); }
 }
 
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
+
     50% {
-        transform: translateX(calc(-240px * 3)); /* Se detiene antes de llegar al final */
+        transform: translateX(calc(-240px * 3));
     }
+
     100% {
-        transform: translateX(0); /* Vuelve al inicio */
+        transform: translateX(0);
     }
 }
