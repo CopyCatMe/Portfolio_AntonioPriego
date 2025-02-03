@@ -352,6 +352,12 @@ h3 {
     padding: 5px;
 }
 
+@media screen and (max-height: 830px) {
+    body {
+        border: none;
+    }
+}
+
 
 /* --- Menos height ---  */
 @media screen and (max-height: 900px) {
