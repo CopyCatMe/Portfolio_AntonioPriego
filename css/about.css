@@ -2,17 +2,14 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	padding: 3rem;
-	width: 100%;
+	padding: 50px;
 	max-width: 600px;
 	background-color: #1b2028;
 	border-radius: 16px;
-	position: relative;
-	border: 3px solid transparent;
-	background-clip: padding-box;
 	text-align: center;
 	color: #f1f3f3;
 	margin: 50px;
+    transition: transform 0.2s ease-in-out;
 	background-image: linear-gradient(
 		135deg,
 		rgb(66, 66, 66),
@@ -20,25 +17,10 @@
 		#252525 20%,
 		#222222 100%
 	);
+}
 
-	&:after {
-		content: "";
-		display: block;
-		top: -3px;
-		left: -3px;
-		bottom: -3px;
-		right: -3px;
-		z-index: -1;
-		position: absolute;
-		border-radius: 16px;
-		background-image: linear-gradient(
-			135deg,
-			#919191dc,
-			rgba(59, 59, 59, 0.404) 20%,
-			#3a3a3a 30%,
-			#53535357 100%
-		);
-	}
+.profile:hover {
+    transform: scale(1.02);
 }
 
 .profile-image {
@@ -84,16 +66,15 @@
 
 .profile-text {
 	margin-top: 1.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
+	padding: 1rem;
 
-	& > * {
-		margin: 0 0.25rem;
+	p {
+		margin: 0;
 		transition: transform 0.2s ease-in-out;
 	}
 
-	& > *:hover {
+	p:hover {
 		transform: scale(1.02);
 	}
 }
